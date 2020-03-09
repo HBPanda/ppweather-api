@@ -1,7 +1,7 @@
 {
   "name": "ppweather-api",
   "version": "1.0.0",
-  "description": "API for technical evaluation",
+  "description": "API for Particular Presence technical evaluation",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
