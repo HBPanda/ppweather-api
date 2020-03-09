@@ -1,0 +1,17 @@
+{
+  "name": "ppweather-api",
+  "version": "1.0.0",
+  "description": "API for technical evaluation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Howard Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
