@@ -1,9 +1,24 @@
 const server = require('express')();
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
+const authRoutes = require('./src/routes/auth');
 const PORT = process.env.PORT || 3000;
 
 server.use(bodyParser.urlencoded({extended: false}));
+server.use(bodyParser.json());
+
+mongoose.connect(
+    'mongodb+srv://ppweatheradmin:' + 
+    process.env.MONGO_ATLAS_PW + 
+    '@cluster0-xfiit.mongodb.net/test?retryWrites=true&w=majority', 
+    { 
+        useNewUrlParser: true, 
+        useUnifiedTopology: true,
+        useCreateIndex: true
+    }
+);
+
+server.use('/auth', authRoutes);
 
 server.get('/', function(req, res, next){
     res.send('PPWeather');
