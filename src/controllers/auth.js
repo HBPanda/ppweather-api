@@ -67,7 +67,7 @@ exports.login = (req, res, next) => {
                 if (result) {
                     var token = jwt.sign({
                         email: user[0].email,
-                        userId: user[0]._id
+                        city: user[0].city,
                     }, process.env.JWT_KEY,
                         {
                             expiresIn: "1h"

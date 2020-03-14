@@ -1,6 +1,7 @@
 {
     "env": {
         "MONGO_ATLAS_PW": "root",
-        "JWT_KEY": "secret"
+        "JWT_KEY": "secret",
+        "WEATHER_API_KEY": "50f9b441ba1a483806e77978ab5a2fe0"
     }
 }
